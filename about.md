@@ -10,6 +10,6 @@ Some information about you!
 
 A place to include any other types of information that you'd like to include about yourself.
 
-### Contact me
+### Contacte
 
-[email@domain.com](mailto:email@domain.com)
+[julensment@gmail.com](mailto:julensment@gmail.com)
