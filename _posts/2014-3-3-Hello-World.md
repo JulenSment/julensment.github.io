@@ -1,9 +1,10 @@
 ---
 layout: post
-title: You're up and running!
+title: Hola Món!
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+Som-hi! que ja ho tenim!
+Textos i textos, amb dibuixos i tot.
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 
