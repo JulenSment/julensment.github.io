@@ -3,7 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: Julen i Sment
+name: Julen & Sment
+
+# Name of your navbar
+webname: Julen & Sment
 
 # Short bio or description (displayed in the header)
 description: © 2026
