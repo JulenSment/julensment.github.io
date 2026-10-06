@@ -339,8 +339,8 @@ h2.fat {
     max-width:30%
 }
 
-#web-music {
-    background-image: url(/img/music.jpg);
+.portada {
+    background-image: url(/images/cover.jpg);
     color:var(--color-white)
 }
 
