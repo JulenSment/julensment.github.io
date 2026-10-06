@@ -338,8 +338,8 @@ h2.fat {
 }
 .portada h1 {
     color:var(--color-black);
-    font-size:9em;
-    line-height:2em;
+    font-size:12em;
+    line-height:3.9em;
 }
 #blured {
     overflow: hidden;
