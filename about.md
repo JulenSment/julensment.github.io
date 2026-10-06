@@ -1,15 +1,17 @@
 ---
-layout: page
-title: About
-permalink: /about/
+layout: about
+title: Contacte
+permalink: /contacte/
+about: true
+
 ---
 
-Some information about you!
+###### <span itemprop="jobTitle">Il·lustració | Disseny | Web | Músic | tècnic de So</span>
 
-### More Information
+Vaig estudiar Arts Aplicades, il·lustració, dibuix de model i pintura al Pau Gargallo de Badalona.
+Música moderna a l'escola de Música de Badalona i al Taller de Músics de Barcelona.
+<br>
+Actualment compagino la feina de *creatiu gràfic* amb la de *Músic Baterísta*.
 
-A place to include any other types of information that you'd like to include about yourself.
 
-### Contacte
-
-[julensment@gmail.com](mailto:julensment@gmail.com)
+Si em necessites per a algún projecte, serà un plaer poder ajudar-te.
