@@ -5,13 +5,6 @@
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 	
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WXMBJZW');</script>
-<!-- End Google Tag Manager -->
 
     {% include meta.html %}
 
@@ -30,10 +23,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </head>
 
   <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXMBJZW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 	<!-- Page content -->
 	<div class="page cover-page" id="page">
@@ -44,62 +33,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div itemscope itemtype="http://schema.org/Person">
 				<section class="anm-moveFromBottomFade delay-200">
 					<h1 class="anm-scaleUpCenter delay-400">
-					<img src="https://avatars0.githubusercontent.com/u/9498876?s=400&u=aee7e89c69bf3dee9903bc85ec6aa33985148325&v=4" id="avatar" class="anm-scaleUp delay-400" rel="Avatar de Isard Miralles">
-					<span itemprop="name">Isard Miralles </span></h1>
+					<img src="https://avatars0.githubusercontent.com/u/9498876?s=400&u=aee7e89c69bf3dee9903bc85ec6aa33985148325&v=4" id="avatar" class="anm-scaleUp delay-400" rel="Avatar de Julen & Sment">
+					<span itemprop="name">{{ site.webname}}</span></h1>
 					{{ content }}
 					<br>
 					<strong>
 						<em class="anm-scaleUp delay-400"><a href="mailto:isardmt@gmail.com" itemprop="email">isardmt@gmail.com</a></em>
-						<span itemprop="telephone"><em class="anm-scaleUp delay-600"><a href="tel:+34 {{ site.phone }}"><i class="icon-mobile"></i>658973617</a></em></span>
+						<span itemprop="telephone"><em class="anm-scaleUp delay-600"><a href="tel:+34 {{ site.phone }}"><i class="icon-mobile"></i>{{ site.phone }}</a></em></span>
 					</strong>
 					<br>
 				</section>
 				<hr>								
 			</div>
 			</div>
-			<div id="timeliner">
-				<section class="cv-timeline-container">
-    				<h2 class="timeline-title">Experiències</h2>
-    				<div class="main-timeline">
-        
-       				 <!-- Tarjeta Izquierda (Bloque 1) -->
-        				<div class="timeline-block block-left">
-            				<div class="timeline-marker"></div>
-           					<div class="timeline-card-content">
-                				<span class="timeline-tag">2025 - Presente</span>
-                				<h3>Julen i Sment</h3>
-                				<h4>Ed. Cometa Roja</h4>
-                				<p>Publicació del llibre il·lustrat</p>
-            				</div>
-        				</div>
-
-        				<!-- Tarjeta Derecha (Bloque 2) -->
-        				<div class="timeline-block block-right">
-            				<div class="timeline-marker"></div>
-            				<div class="timeline-card-content">
-                				<span class="timeline-tag">2020 - 2026</span>
-                				<h3>Desarrollador Web UI</h3>
-                				<h4>Agencia Pixel Perfect</h4>
-                				<p>xxxx xxx xx x  xxxx xxxxx xxxx xxx x  xxx xx  xxxx xxx x x xx x x xx</p>
-            				</div>
-        				</div>
-
-        				<!-- Tarjeta Izquierda (Bloque 3) -->
-        				<div class="timeline-block block-left">
-            				<div class="timeline-marker"></div>
-            				<div class="timeline-card-content">
-                				<span class="timeline-tag">2020 - 2022</span>
-                				<h3>Música</h3>
-                				<h4>Startup </h4>
-                				<p>xxxx xxx xx x  xxxx xxxxx xxxx xxx x  xxx xx  xxxx xxx x x xx x x xx</p>
-            				</div>
-        				</div>
-
-    				</div>
-				</section>
-			</div>
 			{% include partials/credits.html %}
-    		{% include partials/coffee.html %}   		
+    		{% include partials/coffee.html %}
 		</main>
 		{% include partials/footer.html %}
 	</div><!-- /#page -->
@@ -107,13 +55,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- Out of page
 		================================================== -->	
     {% include partials/dialog.html %}  
-    {% include partials/rights.html %}  
 
     <!-- Scripts
     ================================================== -->
   	<script src="{{ site.baseurl }}/hipertextos/js/jquery.js"></script>
   	<script src="{{ site.baseurl }}/hipertextos/js/anime.js"></script>
   	<script src="{{ site.baseurl }}/hipertextos/js/icons.js"></script>
-    {% include analytics.html %}
   </body>
 </html>
