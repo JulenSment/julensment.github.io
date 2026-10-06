@@ -17,19 +17,37 @@ comments: true
 			</div>
 		</header>
 		<div>
+
+<div class="post">
+<h1>Tag: {{ page.tag }}</h1>
+<ul>
+{% for post in site.tags[page.tag] %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
+    {{ post.description }}
+  </li>
+{% endfor %}
+</ul>
+</div>
+<hr>
 			<article id="post-video" class="post anm-scaleUpCenter delay-800">
 				<div id="entry" itemscope itemtype="http://schema.org/Article">
 					<figure id="post-img">
-						<a href="{{ site.baseurl }}/{{ page.img }}" data-lightbox><img src="{{ site.baseurl }}/{{ page.img }}"></a>
+						<a href="../{{ page.img }}" data-lightbox="roadtrip"><img src="../{{ page.img }}"></a>
 					</figure>
 	    			{{ content }}
 				</div>
 				{% if page.bigger %}
 				<section id="big-post-img" class="cover">
-					<a href="{{ site.baseurl }}/{{ page.img }}" data-lightbox><img src="{{ site.baseurl }}/{{ page.img }}"></a>
+					<a href="../{{ page.img }}" data-lightbox="roadtrip"><img src="../{{ page.img }}"></a>
 				</section>
 				{% endif %}
 				<em><hr></em>
+				<span>[
+  				{% for tag in page.tags %}
+    				{% capture tag_name %}{{ tag }}{% endcapture %}
+    				<a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+  				{% endfor %}
+				]</span>
 				<div id="date">
     				<p>Publicat el {{ page.date | date: "%e %B , %Y" }}</p>
   				</div>

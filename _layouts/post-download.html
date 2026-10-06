@@ -6,7 +6,6 @@ comments: true
   	{% include partials/navigation/nav-article.html %}
     <main id="page-main" role="main">
 		<header id="post-header" class="anm-scaleUpDown delay-100">
-			<div>
 				<h1 id="post-title" class="anm-fadeIn delay-300">{{ page.title }}</h1>
 				{% if page.next.url %}
 					<a href="{{page.next.url}}" class="siguiente anm-rotatePullBottom delay-200" rel="Següent Article {{ page.next.title }}" title="{{ page.next.title }}">Següent &rsaquo;</a>
@@ -14,22 +13,19 @@ comments: true
 				{% if page.previous.url %}
 					<a href="{{page.previous.url}}" class="anterior anm-rotatePullBottom delay-200" rel="Anterior Article {{ page.previous.title }}" title="{{ page.previous.title }}">&lsaquo; Anterior</a>
 				{% endif %}
-			</div>
 		</header>
 		<div>
-			<article id="post-video" class="post anm-scaleUpCenter delay-800">
-				<div id="entry" itemscope itemtype="http://schema.org/Article">
+			<article id="post-download" class="post anm-scaleUpCenter delay-800">
+				<div id="entry">
 					<figure id="post-img">
-						<a href="{{ site.baseurl }}/{{ page.img }}" data-lightbox><img src="{{ site.baseurl }}/{{ page.img }}"></a>
-					</figure>
+						<a href="../{{ page.img }}" data-lightbox="roadtrip"><img src="../{{ page.img }}"></a>
+					</figure>					
 	    			{{ content }}
 				</div>
-				{% if page.bigger %}
-				<section id="big-post-img" class="cover">
-					<a href="{{ site.baseurl }}/{{ page.img }}" data-lightbox><img src="{{ site.baseurl }}/{{ page.img }}"></a>
-				</section>
-				{% endif %}
 				<em><hr></em>
+				<aside id="post-share">
+					{% include share.html %}
+				</aside>
 				<div id="date">
     				<p>Publicat el {{ page.date | date: "%e %B , %Y" }}</p>
   				</div>

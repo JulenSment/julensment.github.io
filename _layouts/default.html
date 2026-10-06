@@ -1,7 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="ca-ES">
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <meta name="encoding" charset="utf-8" />
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WXMBJZW');</script>
+<!-- End Google Tag Manager -->
 
     {% include meta.html %}
 
@@ -9,44 +19,120 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/hipertextos/styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/hipertextos/styles/adding.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/hipertextos/styles/style.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/hipertextos/styles/adding.css" />
+{% if page.url == "/" %}
+<link rel="stylesheet" href="{{ site.baseurl }}/hipertextos/styles/sheetslider.css" />
+{% endif %}
+	{% if page.comments %}
+	  <link rel="stylesheet" href="{{ site.baseurl }}/hipertextos/styles/adding-blog.css" />
+	  <link rel="stylesheet" href="{{ site.baseurl }}/hipertextos/styles/lightbox3.css" />
+	{% endif %}
+	<link rel="stylesheet" href="{{ site.baseurl }}/hipertextos/styles/anime.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/hipertextos/styles/aos.css" />
+	{% if page.parallax %}<script src="{{ site.baseurl }}/hipertextos/js/jquery-latest.js"></script>
+  	<script>
+  	if ($(window).width() > 768) {
+  		$(document).ready(function(){
+
+			$(window).scroll(function(){
+				var barra = $(window).scrollTop();
+				var posicion = barra * 0.35;
+
+			$('.parallax').css({
+				'background-position': '0 -' + posicion + 'px'
+				});
+			});
+
+		});
+	} else {
+		  		$(document).ready(function(){
+
+			$(window).scroll(function(){
+				var barra = $(window).scrollTop();
+				var posicion = barra * 0.12;
+
+			$('.parallax').css({
+				'background-position': '0 -' + posicion + 'px'
+				});
+			});
+
+		});
+	 }
+  	</script>
+  	{% endif %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    {% seo %}
+	  
+    {% include favicons.html %}
+	<style type="text/css">
+		.preload {display: none;} #site-nav {font-family: "San Francisco"}
+	</style>
+	
+  	{% if page.parallax %}
+	<img class="preload" src="/img/home.jpg" width="2010" height="1280" alt="imatge futurista a tot color">
+	<img class="preload" src="/img/imac.jpg" width="1920" height="2100" alt="edició web professional">
+	<img class="preload" src="/img/imacblur.jpg" width="1920" height="2100" alt="edició web desenfocat">
+	<img class="preload" src="/img/music.jpg" width="1920" height="2880" alt="imatge amb saxo i bateria">
+  	{% endif %}
+
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">Nosaltres</a>
-          </nav>
-        </header>
-      </div>
-    </div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXMBJZW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-    <div id="main" role="main" class="container">
+	<div id="fases">
+		<!-- Theme inputs (invisibles) -->		
+		<input type="radio" id="theme-light" name="theme" aria-hidden="true" hidden>
+		<input type="radio" id="theme-soft" name="theme" aria-hidden="true" hidden>
+		<input type="radio" id="theme-dark" name="theme" aria-hidden="true" hidden>
+	</div>
+
+		
+	<!-- Page content -->
+	<div class="page" id="page">
       {{ content }}
-    </div>
+    {% include partials/footer.html %}
+	</div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+		<!-- Out of page
+		================================================== -->	
+    {% include partials/dialog.html %}  
+
+
+    <!-- Scripts
+    ================================================== -->
+  	<script src="{{ site.baseurl }}/hipertextos/js/jquery.js"></script>
+	{% if page.url == "/" %}
+	<script src="{{ site.baseurl }}/hipertextos/js/sheetslider.min.js"></script>
+	{% endif %}
+	<script src="{{ site.baseurl }}/hipertextos/js/icons.js"></script>
+  	<script src="{{ site.baseurl }}/hipertextos/js/anime.js"></script>
+  	{% if page.comments %}<script src="{{ site.baseurl }}/hipertextos/js/lightbox3.min.js"></script>{% endif %}
+  	<script src="{{ site.baseurl }}/hipertextos/js/aos.js"></script>
+	<script>
+		AOS.init({
+			easing: 'ease-out-back',
+			duration: 1000
+		});
+	</script>
+	<script>
+  		$(document).ready(function() {
+    		$("[href]").each(function() {
+    		    if (this.href == window.location.href) {
+    	        	$(this).addClass("active");
+    	    	}
+    		});
+		});
+  	</script>
 
     {% include analytics.html %}
+      
   </body>
 </html>

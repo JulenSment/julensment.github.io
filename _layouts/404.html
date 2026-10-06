@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ca-ES">
+  <head>
+    <meta name="encoding" charset="utf-8" />
+    <title>{{ page.title }}</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/hipertextos/styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/hipertextos/styles/adding.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+    {% include favicons.html %}
+
+  </head>
+
+  <body>
+	<!-- Page content -->
+	<div class="page cover-page" id="page">
+	{% include partials/navigation/nav-about.html %}
+		<main id="page-main" class="error">
+			<div>
+			<div>
+				<section>
+					<h1>Error 404</h1>
+					<h3>Pàgina no trobada</h3>
+					{{ content }}
+					<br>
+					<hr>
+					<em><a href="{{ site.baseurl }}">Tornar a l'inici</a></em>
+					<hr>
+					<br>
+				</section>
+				<hr>								
+			</div>
+			</div>		
+		</main>
+		{% include partials/footer.html %}
+	</div><!-- /#page --> 
+
+    <!-- Scripts
+    ================================================== -->
+  	<script src="{{ site.baseurl }}/hipertextos/js/jquery.js"></script>
+    {% include analytics.html %}
+  </body>
+</html>

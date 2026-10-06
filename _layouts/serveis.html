@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ca-ES">
+  <head>
+    <meta name="encoding" charset="utf-8" />
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+	<link rel="canonical" href="https://isardmiralles.com/serveis"/>
+	<meta itemprop="name" content="Secció serveis Web"/>
+	<meta itemprop="url" content="https://isardmiralles.com/serveis"/>
+	<meta itemprop="thumbnailUrl" content="{{ site.baseurl }}/hipertextos/brand/cover.png"/>
+	<link rel="image_src" href="{{ site.baseurl }}/hipertextos/brand/cover.png" />
+	<meta itemprop="image" content="{{ site.baseurl }}/hipertextos/brand/cover.png"/>
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/hipertextos/styles/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/hipertextos/styles/adding.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/hipertextos/styles/adding-serveis.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/hipertextos/styles/anime.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/hipertextos/styles/aos.css" />    
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    
+  	{% if page.parallax %}<script src="{{ site.baseurl }}/hipertextos/js/jquery-latest.js"></script>
+  	<script>
+  	if ($(window).width() > 768) {
+  		$(document).ready(function(){
+
+			$(window).scroll(function(){
+				var barra = $(window).scrollTop();
+				var posicion = barra * 0.35;
+
+			$('.parallax').css({
+				'background-position': '0 -' + posicion + 'px'
+				});
+			});
+
+		});
+	} else {
+		  		$(document).ready(function(){
+
+			$(window).scroll(function(){
+				var barra = $(window).scrollTop();
+				var posicion = barra * 0.12;
+
+			$('.parallax').css({
+				'background-position': '0 -' + posicion + 'px'
+				});
+			});
+
+		});
+	 }
+  	</script>
+  	{% endif %}
+  	
+    {% include favicons.html %}
+	<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WXMBJZW');</script>
+	<!-- End Google Tag Manager -->
+
+	<style type="text/css">
+		.preload {display: none;}
+	</style>
+	
+  	{% if page.parallax %}
+	<img class="preload" src="/img/serveis.jpg" width="1920" height="1920">
+  	{% endif %}
+  	
+  </head>
+
+  <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXMBJZW"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<!-- Page content -->
+	<div class="page serveis-page" id="page">
+  	{% include partials/navigation/nav-serveis.html %}
+	{% include partials/header-serveis.html %}
+  	<main id="page-main" class="serveis">
+		<section id="section-web" class="anm-fadeIn delay-200">
+			<hr>
+	  		<div id="serveis-pre" class"anm-rotateRoomBottomIn delay-300">
+  				<h2>“La simplicitat és la màxima sofisticació”<h2>
+  				<h4><small>Leonardo Da Vinci</small></h4>
+  				<hr>
+  			</div>
+		</section>
+		<section>
+			<div id="web-oferta" class="parallax" style="background-image: url('{{ site.baseurl }}/img/imac.jpg');">
+				<div>
+					<hr>
+					<div id="fronters">
+						<section>
+							<h2 class="fat"><em>El teu negoci<br>en bones mans</em></h2>
+							<h3>Disseny Web exclusiu per projecte.<br>
+							<i><a href="https://isardmiralles.com/tarifes/">Tarifes</a> &gt; </i></h3>
+   							<hr>
+   							<h5 data-aos="fade-up" data-aos-duration="1500">Edició Web Professional</h5>
+   							<h5 data-aos="fade-up" data-aos-duration="1500">Sense Plantilles</h5>
+   							<h5 data-aos="fade-up" data-aos-duration="1500">Responsive</h5>
+						</section>
+					</div>
+				<hr>
+	   			<div id="glassed" class="parallax" style="background-image: url('{{ site.baseurl }}/img/imacblur.jpg');">
+	   			<div id="web-body">
+   					<h5>Desenvolupem disseny web amb programació a mida, perquè la teva pàgina web o botiga en línia sigui escalable, àgil, segura i amigable a Google. Estudiem cada cas específic i implementem la tecnologia que més s’adeqüi, sense plantilles i amb programació a mida.</h5>
+   				</div>
+   				<hr class="lifting">
+   				<p>Serveis professionals de disseny i programació de pàgines web de tot tipus: webs corporatives, institucionals, catàlegs o botigues online. Totes les pàgines web están dissenyades a mida, orientades cap als objectius de la marca i són absolutament úniques.<br>
+				Estratègia SEO, integració de Google Analytics, Google Business i Google Maps, Disseny totalment adaptat a tots els dispositius (disseny responsive), Còdi optimitzat, implementació i/o creació de la imatge corporativa (Branding), seguretat SSL i grafísmes exclusius.</p>
+	   			<br>
+	   			</div>
+	   		</div>
+		</section>
+    {% include partials/coffee.html %}   		
+	</main>
+    {% include partials/footer.html %}
+	</div>
+		<!-- Out of page
+		================================================== -->	
+    {% include partials/dialog.html %}   		
+    
+    <!-- Scripts
+    ================================================== -->
+  	<script src="{{ site.baseurl }}/hipertextos/js/jquery.js"></script>
+  	<script src="{{ site.baseurl }}/hipertextos/js/anime.js"></script>
+  	<script src="{{ site.baseurl }}/hipertextos/js/icons.js"></script>
+  	<script src="{{ site.baseurl }}/hipertextos/js/aos.js"></script>
+		<script>
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
+		</script>
+    {% include analytics.html %}
+  </body>
+</html>
