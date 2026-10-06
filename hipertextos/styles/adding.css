@@ -336,7 +336,15 @@ h2.fat {
     background-image: url(/images/cover.jpg);
     color:var(--color-white)
 }
-
+.portada h1 {
+    color:var(--color-black);
+    font-size:6em;
+    line-height:2em;
+}
+.portada h2 {
+    font-size:1.6em!important;
+    line-height:2em;
+}
 #blured {
     overflow: hidden;
     padding: 32px 21px 0 11px;
