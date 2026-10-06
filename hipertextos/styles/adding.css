@@ -338,11 +338,7 @@ h2.fat {
 }
 .portada h1 {
     color:var(--color-black);
-    font-size:6em;
-    line-height:2em;
-}
-.portada h2 {
-    font-size:1.6em!important;
+    font-size:9em;
     line-height:2em;
 }
 #blured {
@@ -551,9 +547,10 @@ figure em a {
 }
 
 #textlighting {
-    font-size: 2.1em !important;
+    font-size: 2.3em !important;
     letter-spacing: .003em !important;
-    padding-bottom: 2.1em;
+    padding-bottom: 5.1em;
+    margin-top: -1.1em;
 }
 
 #page-nav a {
