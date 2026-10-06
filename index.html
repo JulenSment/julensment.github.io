@@ -1,18 +1,30 @@
 ---
 layout: default
+home: true
+comments:
+matte-demo:
+parallax: true
+
 ---
-
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+    {% include partials/navigation/nav.html %}
+    <span itemscope itemtype="http://schema.org/LocalBusiness">
+	{% include partials/heada.html %}
+    <main id="page-main" role="main" class="darkmode anm-fadeIn delay-100">
+		<section id="covers">
+			<div id="glass-front">
+				{% include partials/navigation/covers.html %}
+				<hr class="lifting">
+			</div>
+		</section>
+		<section id="coffee" class="fronter">
+			<hr>
+			<em><img src="{{ site.baseurl }}/hipertextos/svg/coffee.svg" alt="imatge de tasa de cafè"></em>
+			<em><h2>Fem un Cafè?</h2></em>
+			<div class="thumb-2 pushed-5">
+				<p>Tu poses la idea i jo el cafè.<br>
+				Explica'm el que necessites i junts farem un pressupost ajustat a les teves necessitats.</p>
+			</div>
+			<em class="thumb" data-aos="fade-up" data-aos-duration="1500" title="Dades de contacte"><u><label for="modal-two">Contactar</label></u></em>
+			<br>
+		</section>
+    </main></span>
