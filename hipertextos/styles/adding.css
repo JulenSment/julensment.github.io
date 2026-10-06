@@ -32,7 +32,6 @@
 }
 #cover-front figure {
     text-align: right;margin-top:12px;
-    filter: invert(100%);
     padding-right: 2em;
 }
 #glass-front a h5:hover, #glassed, #page-header.vamos, #web-branding h1 {
