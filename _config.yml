@@ -36,6 +36,14 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
+# Includes credits 1r llibre
+nom: Julen & Sment
+autor: Alexandra Verde
+ilustrator: Isard Miralles
+any: 2026
+edit: Ed. Cometa Roja
+desc: text de prova per a el primer llibre de Julen i Sment
+
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
