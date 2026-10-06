@@ -14,12 +14,17 @@
     line-height: 1.8em ;
 }
 #cover-front p {
-    font-size:1.1em;
     line-height: 1.6em ;
     font-weight:normal;
 }
+#cover-front.cop b {
+    font-size:1em;
+    font-weight:lighter;
+    line-height: 1.6em ;
+}
 #cover-front b {
     font-size:1em;
+    color:var(--color-grey);
     font-weight:lighter;
     line-height: 1.6em ;
 }
